@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Timers;
+using NUnit.Framework;
+using NUnit.Framework.Interfaces;
+
+namespace Counter_Clock
+{
+    class CounterClass
+    {
+        private int _count;
+        private string _name;
+
+        public CounterClass (string name)
+        {
+            _name = name;
+            _count = 0;
+        }
+
+        public void Increment()
+        {
+            _count++;
+        }
+        
+        public void Reset()
+        {
+            _count = 0;
+        }
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
+        public int Value
+        {
+            get
+            {
+                return _count;
+            }
+            set
+            {
+                _count = value;
+            }
+        }
+    }
+}
